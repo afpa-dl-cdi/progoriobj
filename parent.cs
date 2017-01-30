@@ -6,8 +6,8 @@ namespace ProgOrieObj
     /// </summary>
     class Parent
     {
-        /* ***************************************************
-        *************        CONSTANTES        *************** 
+        /* *************************************************
+        *************        CONSTANTES        *************
        ************************************************** */
        /// <summary>
        /// Modèle du type d'homme
@@ -15,8 +15,8 @@ namespace ProgOrieObj
         const string MODELE = "HOMO SAPIENS SAPIENS";
 
 
-        /* ***************************************************
-        *************        VARIABLES        *************** 
+        /* **************************************************
+        *************        VARIABLES        ***************
        ************************************************** */
         protected string _nom;
         /// <summary>
@@ -26,8 +26,8 @@ namespace ProgOrieObj
 
         public static int counter = 0;
 
-        /* ***************************************************
-         *************        ACCESSEURS        *************** 
+        /* **************************************************
+         *************        ACCESSEURS        *************
         ************************************************** */
         /// <summary>
         /// nom du parent
@@ -74,6 +74,7 @@ namespace ProgOrieObj
        ~Parent()
        {
            Console.WriteLine("Destructeur de Parent");
+            counter--;
        }
 
         /* **************************************************
@@ -100,12 +101,12 @@ namespace ProgOrieObj
             Console.WriteLine("Execution de maMethode");
             // faire appel à une méthode privée pour le principe de l'encapsulation
             int resultatDeCalcul = unCalcul(2, 3);                          //ne renseigne que 2 paramètres
-            int resultatDunAutreCalcul = unCalcul(1, 2, 3);                 // renseigne 3 paramètres
+            int resultatDunAutreCalcul = unCalcul(1, 2, 5);                 // renseigne 3 paramètres
             int resultatCalculCible = unCalcul(unTroisiemeChiffre: 9, unPremierChiffre: 1, unDeuxiemeChiffre: 4);
 
             int resultatIntDOut;
             string resultatStringDOut;
-            parametreEnSortie(out resultatIntDOut, out resultatStringDOut);  // l'appelle à ce type de méthode permet des retours multiples par une même fonction
+            parametreEnSortie(3, out resultatIntDOut, out resultatStringDOut);  // l'appelle à ce type de méthode permet des retours multiples par une même fonction
             
       
         }
@@ -148,12 +149,15 @@ namespace ProgOrieObj
         /// </code>
         /// </example>
         /// 
+        ///         
+        ///<param name="multiplicateur"></param>
         /// <param name="premierParametre"></param>
         /// <param name="deuxiemeParametre"></param>
-        private void parametreEnSortie (out int  premierParametre, 
+        private void parametreEnSortie (int multiplicateur ,
+                                        out int  premierParametre, 
                                         out string deuxiemeParametre)
         {
-            premierParametre = 1;
+            premierParametre = 1 * multiplicateur;
             deuxiemeParametre = "une chaine de char";
         }
 

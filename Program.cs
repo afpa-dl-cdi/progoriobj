@@ -14,11 +14,16 @@ namespace ProgOrieObj
             Enfant enfant = new Enfant();
             Console.WriteLine("Nombre d'enfants : {0}", Enfant.counter);
             DernierVivant dernierVivant = new DernierVivant();
-            Console.WriteLine("Nombre de personnes : {0}", DernierVivant.counter);
+            Console.WriteLine("Nombre de personnes : {0}", Parent.counter);
+            Console.WriteLine("paf le dernier vivant est mort...");
+            dernierVivant = null;
+            Console.WriteLine("Nombre de personnes : {0}", Parent.counter);
             enfant.Prenom = "jean";
             Console.WriteLine("naissance de Jean");
             enfant.JourNaissance = Jour.lundi;
             enfant.manger();
+            
+            
 
 
             //Appelle à la classe statique (sans instanciation) 

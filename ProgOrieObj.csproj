@@ -47,6 +47,8 @@
     <Compile Include="DernierVivant.cs" />
     <Compile Include="Enfant.cs" />
     <Compile Include="IDernierMessage.cs" />
+    <Compile Include="IMonAutreInterface.cs" />
+    <Compile Include="IMonInterface.cs" />
     <Compile Include="Jour.cs" />
     <Compile Include="Lettre.cs" />
     <Compile Include="Parent.cs" />

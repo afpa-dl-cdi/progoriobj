@@ -7,6 +7,7 @@ namespace ProgOrieObj
     /// </summary>
     sealed class DernierVivant : Enfant, IDernierMessage
     {
+        
         /// <summary>
         /// constructeur 
         /// </summary>
@@ -44,6 +45,14 @@ namespace ProgOrieObj
         public void DernierRepas()
         {
             Console.WriteLine("Ceci est mon dernier repas");
+        }
+
+        /// <summary>
+        /// ma méthode
+        /// </summary>
+        public void maMethode()
+        {
+            throw new NotImplementedException();
         }
     }
 }
