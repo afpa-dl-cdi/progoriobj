@@ -4,7 +4,7 @@ namespace ProgOrieObj
     /// <summary>
     /// Classe de type parent pouvant être héritée
     /// </summary>
-    class Parent
+    class Parent : Humain
     {
         /* *************************************************
         *************        CONSTANTES        *************

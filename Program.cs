@@ -16,15 +16,22 @@ namespace ProgOrieObj
             DernierVivant dernierVivant = new DernierVivant();
             Console.WriteLine("Nombre de personnes : {0}", Parent.counter);
             Console.WriteLine("paf le dernier vivant est mort...");
-            dernierVivant = null;
-            Console.WriteLine("Nombre de personnes : {0}", Parent.counter);
+            dernierVivant = null;                                             //ne détruit pas l'objet immédiatement
+            Console.WriteLine("Nombre de personnes : {0}", Parent.counter);   // tant que le Garbage Collector n'est pas passé, le nombre de personne n'est pas décrémenté
+            Parent parent = new Parent();
             enfant.Prenom = "jean";
             Console.WriteLine("naissance de Jean");
             enfant.JourNaissance = Jour.lundi;
             enfant.manger();
-            
+
+            //Que donne l'instantiation suivante ??
+            Humain humain = new Parent();
             
 
+            // et ceci est il possible?
+            Humain[] tableauDHumain = { enfant, parent, dernierVivant };      
+
+            
 
             //Appelle à la classe statique (sans instanciation) 
             Lettre.ver();
