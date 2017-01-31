@@ -26,8 +26,8 @@ namespace ProgOrieObj
         }
 
         /// <summary>
-        /// Acte permettant d'absorber l'air autour de soit 
-        /// pour permettre une absorption de l'oxgène
+        /// Acte permettant d'absorber l'air autour de soi 
+        /// pour permettre une absorption de l'oxygène
         /// </summary>
         public void respirer()
         {

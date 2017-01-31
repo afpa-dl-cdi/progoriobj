@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="DernierVivant.cs" />
     <Compile Include="Enfant.cs" />
+    <Compile Include="Humain.cs" />
     <Compile Include="IDernierMessage.cs" />
     <Compile Include="IMonAutreInterface.cs" />
     <Compile Include="IMonInterface.cs" />
